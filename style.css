@@ -1,0 +1,172 @@
+```css
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+.container {
+    width: 1000px;
+    max-width: 90%;
+    margin: 30px auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product {
+    display: flex;
+    gap: 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.product img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.info {
+    width: 50%;
+}
+
+.info h2 {
+    font-size: 30px;
+}
+
+.price {
+    color: red;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+button {
+    background: #ee4d2d;
+    color: white;
+    border: 0;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* =========================
+   MÁY TÍNH BẢNG
+   ========================= */
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .product {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .product img {
+        width: 45%;
+    }
+
+    .info {
+        width: 55%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .info h2 {
+        font-size: 24px;
+    }
+
+    .price {
+        font-size: 22px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    button {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+
+/* =========================
+   ĐIỆN THOẠI
+   ========================= */
+
+@media screen and (max-width: 480px) {
+
+    .container {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .product {
+        display: block;
+        padding: 15px;
+    }
+
+    .product img {
+        width: 100%;
+        max-height: 220px;
+        object-fit: cover;
+    }
+
+    /*
+       Trên điện thoại:
+       Ẩn thông tin sản phẩm
+    */
+    .info {
+        display: none;
+    }
+}
+
+
+/* =========================
+   KHI IN
+   ========================= */
+
+@media print {
+
+    .price {
+        display: none;
+    }
+
+    button {
+        display: none;
+    }
+
+    body {
+        background: white;
+    }
+
+    .product {
+        box-shadow: none;
+    }
+}
+```
